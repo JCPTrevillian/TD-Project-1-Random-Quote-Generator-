@@ -61,10 +61,18 @@ function getRandomQuote(array) {
 
 function printQuote() {
   const result = getRandomQuote(quotes);
-  var message = "<p class='quote'>" + result.quote + "</p>" +"<p class='source'>" + result.source + "</p>";
-  document.getElementById('quote-box').innerHTML = message;
+  let message = "<p class='quote'>" + result.quote + "</p>" + "<p class='source'>" + result.source 
 
-} 
+    if ("citation" in result) {
+    message += "<span class='citation'> " + result.citation + "</span>"
+    }  
+  
+    if ("year" in result) {
+    message += "<span class='year'>" + result.year + "</span>" + "</p>"
+    }
+  
+  document.getElementById('quote-box').innerHTML = message;
+}
 
 console.log(quotes)
 
