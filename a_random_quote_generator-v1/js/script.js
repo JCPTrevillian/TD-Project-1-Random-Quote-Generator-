@@ -55,7 +55,7 @@ function getRandomQuote(array) {
 
 
 /***
- * `printQuote` function, include <p></p>
+ * `printQuote` function, include <p></p>. <span> was used to put the citation and year on the same line after source. 
 ***/
 
 
